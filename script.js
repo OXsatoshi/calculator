@@ -1,7 +1,24 @@
-function add(a,b){return a + b;}
+function add(a,b){console.log("from add"); return a + b;}
 function multiply(a,b){return a*b;}
 function substract(a,b){return a-b;}
 function divide(a,b){return a/b;}
 let operation ;
 let firstOperand;
 let secondOperand;
+const OPERATION ={
+
+};
+function operate(operation,firstOperand,secondOperand){
+    const functionOfoperation = getOperationFunction(operation);
+    console.log(functionOfoperation);
+    return functionOfoperation(firstOperand,secondOperand);
+    
+}
+function getOperationFunction(operation){
+    if(operation.toLowerCase() === "add") return add;
+    if(operation.toLowerCase() === "divide") return divide;
+    if(operation.toLowerCase() === "multiply") return multiply;
+    if(operation.toLowerCase() === "substract") return substract;
+
+}
+console.log(operate("substract",1,2));
