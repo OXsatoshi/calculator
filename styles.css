@@ -40,7 +40,7 @@ body {
    align-items: center;
 }
 span {
-    font-weight: 900;
+    font-weight: 600;
     font-size: 1.6rem;
 }
 .multiply > span {
@@ -52,4 +52,13 @@ span {
 }
 .buttons > div:hover {
     background-color: beige;
+}
+.buttons > .operation {
+    background-color: aqua;
+}
+.display {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 2rem;
 }
